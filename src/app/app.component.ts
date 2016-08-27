@@ -1,16 +1,23 @@
-import { Component } from '@angular/core';
+import { Component , OnInit } from '@angular/core';
 import { Thermostat } from './thermostat';
+import { ThermostatService } from './thermostat.service';
 
-const THERMOSTATS: Thermostat[] = [
-  { id: 11, temperature: 20, location: 'Living room' },
-  { id: 12, temperature: 21, location: 'Kitchen' },
-  { id: 13, temperature: 17, location: 'Bedroom' }  
-];
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.sass']
+  styleUrls: ['app.component.sass'],
+  providers: [ThermostatService]
 })
-export class AppComponent {
-  thermostats = THERMOSTATS;
+export class AppComponent implements OnInit {
+  thermostats: Thermostat[];
+
+  constructor(private thermostatService: ThermostatService) { }
+
+  ngOnInit(): void {
+    this.getThermostats();    
+  }
+  
+  getThermostats(): void {
+    this.thermostatService.getThermostats().then(thermostats => this.thermostats = thermostats);
+  }
 }
