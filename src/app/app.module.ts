@@ -7,12 +7,14 @@ import { ThermostatDetailComponent } from './thermostat-detail/thermostat-detail
 import { ThermostatsComponent } from './thermostats/thermostats.component';
 import { ThermostatService } from './thermostat.service';
 import { routing } from './app.routing';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ThermostatDetailComponent,
-    ThermostatsComponent
+    ThermostatsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
