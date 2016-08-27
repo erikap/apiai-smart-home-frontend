@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<h1>My Smart Home</h1>
+
+<h2>Thermostats</h2>
+<div *ngFor="let thermostat of thermostats">
+  <h3>{{thermostat.location}}</h3>
+  Current temperature: {{thermostat.temperature}}
+  <div>
+    <label>Set temperature to: </label>
+    <input [(ngModel)]="thermostat.temperature">
+  </div>
+</div>
