@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ThermostatDetailComponent } from './thermostat-detail/thermostat-detail.component';
 import { ThermostatsComponent } from './thermostats/thermostats.component';
 import { ThermostatService } from './thermostat.service';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ThermostatService } from './thermostat.service';
   imports: [
     BrowserModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
   providers: [
     ThermostatService
