@@ -1,23 +1,10 @@
-import { Component , OnInit } from '@angular/core';
-import { Thermostat } from './thermostat';
-import { ThermostatService } from './thermostat.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.sass'],
-  providers: [ThermostatService]
 })
-export class AppComponent implements OnInit {
-  thermostats: Thermostat[];
+export class AppComponent {
 
-  constructor(private thermostatService: ThermostatService) { }
-
-  ngOnInit(): void {
-    this.getThermostats();    
-  }
-  
-  getThermostats(): void {
-    this.thermostatService.getThermostats().then(thermostats => this.thermostats = thermostats);
-  }
 }
