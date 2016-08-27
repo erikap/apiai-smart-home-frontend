@@ -13,11 +13,4 @@ const THERMOSTATS: Thermostat[] = [
 })
 export class AppComponent {
   thermostats = THERMOSTATS;
-
-  increase(thermostat: Thermostat): void {
-    thermostat.temperature++;
-  };
-  decrease(thermostat: Thermostat): void {
-    thermostat.temperature--;
-  };
 }

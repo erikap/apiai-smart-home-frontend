@@ -2,14 +2,5 @@
 
 <h2>Thermostats</h2>
 <div *ngFor="let thermostat of thermostats">
-  <h3>{{thermostat.location}}</h3>
-  Current temperature: {{thermostat.temperature}}
-  <div>
-    <button (click)="increase(thermostat)">+</button>
-    <button (click)="decrease(thermostat)">-</button>  
-  </div>
-  <div>
-    <label>Set temperature to: </label>
-    <input [(ngModel)]="thermostat.temperature">
-  </div>
+  <app-thermostat-detail [thermostat]="thermostat"></app-thermostat-detail>
 </div>

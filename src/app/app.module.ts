@@ -3,10 +3,12 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { ThermostatDetailComponent } from './thermostat-detail/thermostat-detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ThermostatDetailComponent
   ],
   imports: [
     BrowserModule,
