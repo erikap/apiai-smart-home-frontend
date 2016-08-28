@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/toPromise';
-import { Http, URLSearchParams } from '@angular/http';
+import { Http, Headers } from '@angular/http';
 
 import { Thermostat } from './thermostat';
 
@@ -13,6 +13,16 @@ export class ThermostatService {
     return this.http.get('/api/thermostats').toPromise()
     .then(response => response.json().data as Thermostat[])
     .catch(this.handleError);
+  }
+
+  update(thermostat: Thermostat): Promise<Thermostat> {
+    const url = `/api/thermostats/${thermostat.id}`;
+    const headers = new Headers({'Content-Type': 'application/vnd.api+json'});
+    return this.http
+      .patch(url, JSON.stringify({ data: thermostat }), {headers: headers})
+      .toPromise()
+      .then(() => thermostat)
+      .catch(this.handleError);
   }
 
   private handleError(error: any): Promise<any> {

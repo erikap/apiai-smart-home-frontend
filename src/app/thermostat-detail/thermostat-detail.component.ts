@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Thermostat } from '../thermostat';
+import { ThermostatService } from '../thermostat.service';
 
 @Component({
   selector: 'app-thermostat-detail',
@@ -8,7 +9,7 @@ import { Thermostat } from '../thermostat';
 })
 export class ThermostatDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private thermostatService: ThermostatService) { }
 
   ngOnInit() { }
 
@@ -17,9 +18,11 @@ export class ThermostatDetailComponent implements OnInit {
 
   increase(thermostat: Thermostat): void {
     thermostat.attributes.temperature++;
+    this.thermostatService.update(thermostat);
   };
   decrease(thermostat: Thermostat): void {
     thermostat.attributes.temperature--;
+    this.thermostatService.update(thermostat);
   };
 
 
