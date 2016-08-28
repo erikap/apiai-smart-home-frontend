@@ -16,10 +16,10 @@ export class ThermostatDetailComponent implements OnInit {
   thermostat: Thermostat;
 
   increase(thermostat: Thermostat): void {
-    thermostat.temperature++;
+    thermostat.attributes.temperature++;
   };
   decrease(thermostat: Thermostat): void {
-    thermostat.temperature--;
+    thermostat.attributes.temperature--;
   };
 
 

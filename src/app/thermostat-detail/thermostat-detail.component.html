@@ -1,12 +1,12 @@
 <div *ngIf="thermostat">
-  <h3>{{thermostat.location}}</h3>
-  Current temperature: {{thermostat.temperature}}
+  <h3>{{thermostat.attributes.location}}</h3>
+  Current temperature: {{thermostat.attributes.temperature}}
   <div>
     <button (click)="increase(thermostat)">+</button>
     <button (click)="decrease(thermostat)">-</button>  
   </div>
   <div>
     <label>Set temperature to: </label>
-    <input [(ngModel)]="thermostat.temperature">
+    <input [(ngModel)]="thermostat.attributes.temperature">
   </div>
 </div>

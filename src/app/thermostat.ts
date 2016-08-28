@@ -1,5 +1,9 @@
 export class Thermostat {
-  id: number;
-  temperature: number;
-  location: string;
+  id: string;
+  type: string;
+  attributes: {
+    temperature: number;
+    location: string;
+  }
+  relationships: any;
 }
