@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
     "@types/protractor": "^1.5.16",
-    "angular-cli": "1.0.0-beta.11-webpack.2",
+    "angular-cli": "https://github.com/angular/angular-cli.git#9d697485bd4b7f07c3e13760a4823dc8dec9722b",
     "codelyzer": "0.0.26",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",

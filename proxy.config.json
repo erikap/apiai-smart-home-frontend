@@ -1,0 +1,6 @@
+{
+  "/apiai": {
+    "target": "http://172.17.0.1:80",
+    "secure": false
+  }
+}
