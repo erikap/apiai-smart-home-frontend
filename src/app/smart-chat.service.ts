@@ -21,7 +21,7 @@ export class SmartChatService {
     this.messages.push(message);
     let params: URLSearchParams = new URLSearchParams();
     params.set('q', message.text);
-    this.http.get('/apiai', { search: params }).toPromise()
+    this.http.get('/api/apiai', { search: params }).toPromise()
       .then(response => {
         var answer = response.json() as Message;
         this.messages.push(answer);    
