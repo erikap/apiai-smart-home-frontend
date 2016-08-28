@@ -1,2 +1,7 @@
-<input type="text" placeholder="Enter command...">
+<ul>
+  <li *ngFor="let message of messages">
+    {{message.sender}}: {{message.text}}
+  </li>
+</ul>
 
+<input #chat (keyup.enter)="submitMessage(chat.value); chat.value=''">

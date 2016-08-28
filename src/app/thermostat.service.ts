@@ -8,7 +8,7 @@ export class ThermostatService {
 
   constructor() { }
 
-  getThermostats():  Promise<Thermostat[]> {
+  getThermostats(): Promise<Thermostat[]> {
     return Promise.resolve(THERMOSTATS);
   }
 
