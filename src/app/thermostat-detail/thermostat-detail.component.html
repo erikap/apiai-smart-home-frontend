@@ -1,8 +1,15 @@
 <div *ngIf="thermostat">
-  <h3>{{thermostat.attributes.location}}</h3>
-  Current temperature: {{thermostat.attributes.temperature}}
-  <div>
-    <button (click)="increase(thermostat)">+</button>
-    <button (click)="decrease(thermostat)">-</button>  
+  <div class="col s6 m4 l3">
+    <div class="card grey lighten-3">
+      <div class="card-content">
+        <span class="card-title">{{thermostat.attributes.location}}</span>
+	<h2>{{thermostat.attributes.temperature}}&deg;C</h2>
+      </div>
+      <div class="card-action">
+	<a (click)="increase(thermostat)"><i class="material-icons">add</i></a>
+	<a (click)="decrease(thermostat)"><i class="material-icons">remove</i></a>  
+      </div>
+    </div>
   </div>
 </div>
+
