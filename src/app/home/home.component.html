@@ -13,4 +13,8 @@
   </ul>
 </div>
 
-<input #chat (keyup.enter)="submitMessage(chat.value); chat.value=''" placeholder="What do you want to do?">
+<div class="input-field col s12">
+  <i class="material-icons prefix actionable" (click)="startVoiceRecording()">{{recordingIcon}}</i>
+  <input id="chat-input" [(ngModel)]="chat" (keyup.enter)="submitMessage(chat)" placeholder="Enter a command...">
+</div>
+
