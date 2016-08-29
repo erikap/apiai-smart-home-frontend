@@ -1,14 +1,16 @@
-<ul>
-  <li *ngFor="let message of messages">
-    <div class="row">
-      <div class="col s12 m8" [ngClass]="{'offset-m4': message.sender=='You'}">
-	<i>{{message.sender}} said:</i>
-        <div class="card-panel lighten-2" [ngClass]="{teal: message.sender=='Smart Home', red: message.sender=='You'}">
-          <span class="white-text">{{message.text}}</span>
-        </div>
+<div class="chat">
+  <ul>
+    <li *ngFor="let message of messages">
+      <div class="row chat-message">
+	<div class="col s12 m8" [ngClass]="{'offset-m4': message.sender=='You'}">
+	  <i>{{message.sender}} said:</i>
+          <div class="card-panel lighten-2" [ngClass]="{teal: message.sender=='Smart Home', red: message.sender=='You'}">
+            <span class="white-text">{{message.text}}</span>
+          </div>
+	</div>
       </div>
-    </div>
-  </li>
-</ul>
+    </li>
+  </ul>
+</div>
 
 <input #chat (keyup.enter)="submitMessage(chat.value); chat.value=''" placeholder="What do you want to do?">
