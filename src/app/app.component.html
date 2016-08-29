@@ -1,7 +1,22 @@
-<h1>My Smart Home</h1>
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <div class="container">
+	<a href="#" class="brand-logo">My Smart Home</a>
+	<ul id="nav-mobile" class="right hide-on-med-and-down">
+	  <li><a routerLink="/home">Home</a></li>
+	  <li><a routerLink="/thermostats">Thermostats</a></li>
+	</ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
 
-<nav>
-  <a routerLink="/home">Home</a>
-  <a routerLink="/thermostats">Thermostats</a>
-</nav>
-<router-outlet></router-outlet>
+    
